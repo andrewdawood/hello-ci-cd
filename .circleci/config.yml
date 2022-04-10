@@ -42,4 +42,4 @@ workflows:
       - print_world:
           requires:
             - print_hello
->>>>>>> f460946ff089300dd84d4e83aeabf24f2e3a510f
+            - echo $my_env_var
