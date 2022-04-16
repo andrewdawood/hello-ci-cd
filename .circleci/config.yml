@@ -1,12 +1,6 @@
 version: 2.1
 
 jobs:
-  say-hello:
-    docker:
-      - image: cimg/base:stable
-    steps:
-      - checkout
-      - run: echo say-hello
   test_var:
     docker:
       - image: cimg/base:stable
@@ -16,7 +10,5 @@ jobs:
 workflows:
   say-hello-workflow:
     jobs:
-      - say-hello
-      - test_var:
-          requires:
-            - say_hello
+      - test_var
+
