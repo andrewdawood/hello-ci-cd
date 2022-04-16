@@ -6,7 +6,9 @@ jobs:
       - image: cimg/base:stable
     steps:
       - checkout
-      - run: echo $my_env_var
+      - run: 
+         command:
+           echo $my_env_var
 workflows:
   say-hello-workflow:
     jobs:
